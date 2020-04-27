@@ -903,6 +903,7 @@ prepare_zbx_web_config() {
     server_name=$(escape_spec_char "${ZBX_SERVER_NAME}")
     server_user=$(escape_spec_char "${DB_SERVER_ZBX_USER}")
     server_pass=$(escape_spec_char "${DB_SERVER_ZBX_PASS}")
+    DB_SERVER_HOST=$(escape_spec_char "${DB_SERVER_HOST}")
 
     sed -i \
         -e "s/{DB_SERVER_HOST}/${DB_SERVER_HOST}/g" \
